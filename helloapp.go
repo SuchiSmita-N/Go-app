@@ -2,10 +2,11 @@ package main
 
 import "fmt"
 
-func firstgo() string {
-    return "Hello, My first go app.\n"
-}
+const helloPrefix = "Hello, "
 
+func firstgo(name string) string {
+    return helloPrefix + name
+}
 func main() {
-        fmt.Println(firstgo())
+        fmt.Println(firstgo("suchi"))
 }
