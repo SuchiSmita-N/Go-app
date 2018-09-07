@@ -1,6 +1,6 @@
 # Go-app
-Learning go-first app
+Learning Go
 
-Docs for [Go]:(https://github.com/golang/go/wiki)
-[Learn Go with Test]:(https://github.com/quii/learn-go-with-tests/)
+**Docs for [Go](https://github.com/golang/go/wiki)
+[Learn Go with Test](https://github.com/quii/learn-go-with-tests/)
 
