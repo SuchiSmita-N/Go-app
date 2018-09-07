@@ -5,6 +5,9 @@ import "fmt"
 const helloPrefix = "Hello, "
 
 func firstgo(name string) string {
+	if name == "" {
+        name = "World"
+    }
     return helloPrefix + name
 }
 func main() {
