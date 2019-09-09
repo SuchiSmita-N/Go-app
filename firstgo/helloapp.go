@@ -28,6 +28,6 @@ func greetingPrefix(language string) (prefix string) {
     return
 }
 func main() {
-        fmt.Println(firstgo("suchi", "hindi"))
+        fmt.Println(firstgo("suchi", "Hindi"))
 }
 
