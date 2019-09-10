@@ -1,7 +1,7 @@
 package integers	
 
 import "testing"
-
+#Adding 2 values & writing atest for it
 func Add(x, y int) int {
     return x+y
 }
