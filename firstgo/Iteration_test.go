@@ -14,7 +14,7 @@ func Testiterate(t *testing.T) {
 func iterate(character string) string {
     var iterated string
     for i := 0; i < 5; i++ {
-    	iterated = iterated + character
+    	iterated += character
     }
     return iterated
 }
