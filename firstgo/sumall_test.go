@@ -12,7 +12,20 @@ func Testsumall(t *testing.T) {
 	}
 }
 
+func sumall(nostosum ...[]int) []int {
+	 lenofnos := len(nostosum)
+	 sums := make([]int, lenofnos)
 
-func sumall(nos ...[]int) (sums []int) {
-	    return 
+	 for i, s := range nostosum{
+	 	sums[i] = sum(s)
+	 } 
+	 return sums
 }
+func sum(nos []int) int {
+	sum := 0
+	for _,nos := range nos{
+		sum += nos
+	}
+    return sum
+}
+
