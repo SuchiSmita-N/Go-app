@@ -2,11 +2,10 @@ package main
 
 import "testing"
 
-
-func TestSum(t *testing.T) {
+func Testsum(t *testing.T) {
 	nos := [5]int{1,2,3,4,5}
 
-	get := Sum(nos)
+	get := sum(nos)
 	result:= 15
 
     if result != get {
@@ -14,10 +13,11 @@ func TestSum(t *testing.T) {
     }
 	
 }
-func Sum(nos [5]int) int {
+
+func sum(nos [5]int) int {
 	sum := 0
-	for i := 0; i<5; i++ {
-		sum += nos[i]
+	for _,nos := range nos{
+		sum += nos
 	}
     return sum
 }
