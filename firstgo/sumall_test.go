@@ -3,7 +3,7 @@ package main
 import "testing"
 import "reflect"
 
-func Testsumall(t *testing.T) {
+func Testsumalltails(t *testing.T) {
 	get := sumall([]int{1,2,3}, []int{1,2})
 	result := []int{6,3}
 
@@ -15,7 +15,8 @@ func Testsumall(t *testing.T) {
 func sumall(nostosum ...[]int) []int {
 	var sums []int
 	for _, s := range nostosum{
-	 	sums = append(sums, sum(s))
+		tail := s[1:]
+	 	sums = append(sums, sum(tail))
 	 	// append function which takes a slice and a new value, 
 	 	// returning a new slice with all the items in it.
 	 } 
