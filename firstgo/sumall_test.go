@@ -13,11 +13,11 @@ func Testsumall(t *testing.T) {
 }
 
 func sumall(nostosum ...[]int) []int {
-	 lenofnos := len(nostosum)
-	 sums := make([]int, lenofnos)
-
-	 for i, s := range nostosum{
-	 	sums[i] = sum(s)
+	var sums []int
+	for _, s := range nostosum{
+	 	sums = append(sums, sum(s))
+	 	// append function which takes a slice and a new value, 
+	 	// returning a new slice with all the items in it.
 	 } 
 	 return sums
 }
