@@ -15,6 +15,9 @@ func Testsumalltails(t *testing.T) {
 func sumall(nostosum ...[]int) []int {
 	var sums []int
 	for _, s := range nostosum{
+		if len(s) == 0{
+		sums = append(sums, 0)	
+		}
 		tail := s[1:]
 	 	sums = append(sums, sum(tail))
 	 	// append function which takes a slice and a new value, 
