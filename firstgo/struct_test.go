@@ -2,8 +2,14 @@ package main
 
 import "testing"
 
+type rectangle struct {
+	width float64
+	height float64
+}
+
 func Testperimeter(t *testing.T) {
-	result := perimeter(10.0,10.0)
+	rectangle := Rectangle{10.0, 10.0}
+	result := perimeter(rectangle)
 	expect := 40.0	
 
 	if result != expect {
@@ -12,8 +18,8 @@ func Testperimeter(t *testing.T) {
 }
 
 func TestArea(t *testing.T) {
-
-	result := area(5.0, 6.0)
+	rectangle := Rectangle{10.0, 10.0}
+	result := area(rectangle)
 	expect := 30.0
 
 	if result != expect{
@@ -21,10 +27,10 @@ func TestArea(t *testing.T) {
 	}	
 }
 
-func perimeter(width float64, height float64) float64 {
-    return 2 * (width + height)
+func perimeter(rectangle Rectangle) float64 {
+    return 2 * (rectangle.width + rectangle.height)
 }
 
-func area(width float64, height float64) float64 {
-    return  (width * height)
+func area(rectangle Rectangle) float64 {
+    return  (rectangle.width * rectangle.height)
 }
