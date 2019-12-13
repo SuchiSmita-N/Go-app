@@ -2,25 +2,39 @@ package main
 
 import "testing"
 
-type rectangle struct {
-	width float64
-	height float64
+type Rectangle struct {
+    Width float64
+    Height float64
 }
 
 func (r Rectangle) Area() float64  {
     return 0
 }
 
-func Testperimeter(t *testing.T) {
-	rectangle := Rectangle{10.0, 10.0}
-	result := perimeter(rectangle)
-	expect := 40.0	
+func TestPerimeter(t *testing.T) {
+    rectangle := Rectangle{10.0, 10.0}
+    got := Perimeter(rectangle)
+    want := 40.0
 
-	if result != expect {
-		t.Errorf("result %.2f expect %.2f", result, expect)
-	}
+    if got != want {
+        t.Errorf("got %.2f want %.2f", got, want)
+    }
 }
 
-func perimeter(rectangle Rectangle) float64 {
-    return 2 * (rectangle.width + rectangle.height)
+func TestArea(t *testing.T) {
+    rectangle := Rectangle{12.0, 6.0}
+    got := Area(rectangle)
+    want := 72.0
+
+    if got != want {
+        t.Errorf("got %.2f want %.2f", got, want)
+    }
+}
+
+func Perimeter(rectangle Rectangle) float64 {
+    return 2 * (rectangle.Width + rectangle.Height)
+}
+
+func Area(rectangle Rectangle) float64 {
+    return rectangle.Width * rectangle.Height
 }
