@@ -6,11 +6,11 @@ type Wallet struct {
  }
 
 func (w Wallet) Deposit(amount int) {
-
+	w.balance += amount
 }
 
 func (w Wallet) Balance() int {
-    return 0
+    return w.balance
 }
 
 func TestWallet(t *testing.T) {
@@ -20,6 +20,7 @@ func TestWallet(t *testing.T) {
     wallet.Deposit(10)
 
     got := wallet.Balance()
+    fmt.Printf("address of balance in test is %v \n", &wallet.balance)
     want := 10
 
     if got != want {
